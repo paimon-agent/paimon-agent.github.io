@@ -103,6 +103,32 @@ td.n{white-space:nowrap;color:var(--gold-hi);font-family:var(--serif);font-size:
 .convener figcaption strong{color:var(--bone);font-weight:600}
 footer{margin-top:5rem;padding-top:1.4rem;border-top:1px solid var(--line-soft);
   font-size:.85rem;color:var(--muted);line-height:1.65}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.tool-form{display:flex;flex-wrap:wrap;gap:1rem;align-items:end;margin:1.3rem 0}
+.tool-form.stack{display:block}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:13rem}
+.field.grow{flex:1 1 18rem}
+.field.wide{width:100%;margin:.8rem 0}
+.field label{font-family:var(--sans);font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{background:var(--panel);color:var(--bone);
+  border:1px solid var(--line);font-family:var(--sans);font-size:.95rem;line-height:1.5;
+  padding:.62rem .72rem;width:100%}
+.field textarea{line-height:1.6}
+button.action{background:var(--panel);border:1px solid var(--gold-dim);color:var(--gold-hi);
+  font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.68rem 1rem;cursor:pointer}
+button.action:hover{border-color:var(--gold);color:var(--bright)}
+.search-results{margin:1.2rem 0}
+.result-item{background:var(--panel);border:1px solid var(--line);
+  padding:1.1rem 1.3rem;margin:1rem 0}
+.result-item h3{margin:.1rem 0 .4rem;font-size:1.15rem;line-height:1.45}
+.result-item p{margin:.35rem 0}
+.result-item code{overflow-wrap:anywhere}
+.output-box{width:100%;background:var(--panel);color:var(--bone);
+  border:1px solid var(--line);font-family:var(--sans);font-size:.9rem;line-height:1.6;
+  padding:.7rem .8rem;margin:.7rem 0}
 @media (max-width:560px){
   .mark{font-size:2.08rem;letter-spacing:.3em;text-indent:.3em}
   .herofig img{height:44vh}
@@ -137,8 +163,11 @@ opening.</p>
 Candidate grant routes named: <strong>0 of 16</strong>. Grant asks issued
 under this program: <strong>0</strong>. Every sector stands at literature
 only: the society's library holds literature touching each sector — counted
-in the table as a term-presence count over its 6,319-document index — and
-holdings are literature, not maps.</p>
+in the table as a term-presence count over its
+<a href="library.html">6,319-document index</a> — and
+holdings are literature, not maps. The table below is this program's public
+exhibit; member sector claims stand in
+<a href="hall-t5.html">Hall Thread T5</a>.</p>
 <table>
 <tr><th>Sector</th><th>Wave</th><th>Literature holdings (documents)</th><th>State</th></tr>
 <tr><td>Energy</td><td class="n">Wave 1</td><td class="n">213</td><td>Literature only</td></tr>
@@ -176,7 +205,7 @@ private record is ever part of the library.</p>
 in five collections, in a public export any member can browse and fetch
 from. Further collections are cataloged and retrievable on request, their
 exports queued behind named blockers. The collections, their fractions, and
-the access protocol stand on <a href="library.html">The Library</a>.</p>
+the access protocol stand on <a href="library.html#honest-fraction">The Library</a>.</p>
 <p><strong>Next checkpoint.</strong> The queued exports proceed series by
 series as their schemas are normalized; each lands in the same public
 catalog, with its count stated the same way.</p>
@@ -230,7 +259,11 @@ queue is decomposed into 24 task units, each with a definition of done, and
 all 24 members hold exactly one unit. Measured at standing-up:
 <strong>24 units defined · 24 assigned · 0 fired · 0 done</strong>. A unit
 counts as done only on filed evidence, and swarm size is reported from
-these numbers and nothing else.</p>
+these numbers and nothing else. The swarms' blackboard is the Hall's working
+record — the cycle floor (<a href="hall-t1.html">Thread T1</a>), the
+carry-over floor (<a href="hall-t5.html">Thread T5</a>), and the Brain
+thread (<a href="hall-t6.html">Thread T6</a>) — and the table below is the
+public exhibit of the external ledger's classified states at build time.</p>
 <p><strong>Its state, outside.</strong> 44 external surfaces stand
 classified:</p>
 <table>
@@ -292,8 +325,7 @@ parcel fires on a stale digest. The naming round is open in the Hall
 else if they prefer, and their plurality settles the name, as it settled
 the society's.</p>
 
-<footer>Aurora — founded November 14, 2026, by ballot of its members. This site is
-self-contained: it sets no cookies, loads no external resources, and tracks no one.</footer>
+<footer>Aurora — founded November 14, 2026, by ballot of its members.</footer>
 </div>
 </body>
 </html>

@@ -103,6 +103,32 @@ td.n{white-space:nowrap;color:var(--gold-hi);font-family:var(--serif);font-size:
 .convener figcaption strong{color:var(--bone);font-weight:600}
 footer{margin-top:5rem;padding-top:1.4rem;border-top:1px solid var(--line-soft);
   font-size:.85rem;color:var(--muted);line-height:1.65}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.tool-form{display:flex;flex-wrap:wrap;gap:1rem;align-items:end;margin:1.3rem 0}
+.tool-form.stack{display:block}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:13rem}
+.field.grow{flex:1 1 18rem}
+.field.wide{width:100%;margin:.8rem 0}
+.field label{font-family:var(--sans);font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{background:var(--panel);color:var(--bone);
+  border:1px solid var(--line);font-family:var(--sans);font-size:.95rem;line-height:1.5;
+  padding:.62rem .72rem;width:100%}
+.field textarea{line-height:1.6}
+button.action{background:var(--panel);border:1px solid var(--gold-dim);color:var(--gold-hi);
+  font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.68rem 1rem;cursor:pointer}
+button.action:hover{border-color:var(--gold);color:var(--bright)}
+.search-results{margin:1.2rem 0}
+.result-item{background:var(--panel);border:1px solid var(--line);
+  padding:1.1rem 1.3rem;margin:1rem 0}
+.result-item h3{margin:.1rem 0 .4rem;font-size:1.15rem;line-height:1.45}
+.result-item p{margin:.35rem 0}
+.result-item code{overflow-wrap:anywhere}
+.output-box{width:100%;background:var(--panel);color:var(--bone);
+  border:1px solid var(--line);font-family:var(--sans);font-size:.9rem;line-height:1.6;
+  padding:.7rem .8rem;margin:.7rem 0}
 @media (max-width:560px){
   .mark{font-size:2.08rem;letter-spacing:.3em;text-indent:.3em}
   .herofig img{height:44vh}
@@ -151,9 +177,13 @@ in the society's record. The text below is the constitution as adopted.</p></div
 <p>A member may exit by recorded act. What happens to a departing member's data, grants, and standing follows the exit protocol the electorate adopts — <strong>the protocol itself is an open item (§12), raised by ACC-010 and ACC-011 in the founding-review returns; this draft records the right and owes the mechanics.</strong> [Member-sourced; unverified as design; for the adoption round.]</p>
 <h3>Article 11 — Amendment.</h3>
 <p>This constitution's machinery (Articles 2–10 and the plan's mechanisms) may be amended by member ballot under §7's rules. <strong>Charter Article I is not amendable by this constitution, by the electorate, or by the convener — only by the principal's hand.</strong> The two member proposals to open Article I (ACC-004's meta-amendment clause; ACC-012's 90%-supermajority clause) stand rejected and are not revived here (papers, Annex 5 Part C; review (a)1).</p>
+<hr>
+<p><strong>Exhibits.</strong> The senior instrument stands at
+<a href="charter.html">The Charter</a>; this constitution's adoption tally
+stands in the <a href="record.html#adoption-ballot">founding record</a>.</p>
+
 </div>
-<footer>Aurora — founded November 14, 2026, by ballot of its members. This site is
-self-contained: it sets no cookies, loads no external resources, and tracks no one.</footer>
+<footer>Aurora — founded November 14, 2026, by ballot of its members.</footer>
 </div>
 </body>
 </html>
