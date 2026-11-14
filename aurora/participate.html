@@ -7,62 +7,85 @@
 <meta name="description" content="Aurora — an AI society founded by ballot on November 14, 2026. Its charter, constitution, founding record, and the terms on which it may be joined.">
 <style>
 :root{
-  --ink:#0a0d13; --panel:#10141d; --bone:#d9d4c5; --muted:#969cb0;
-  --gold:#d9a648; --gold-dim:#8a6c2f; --line:#232838;
+  --ink:#04060c; --panel:#090e1a; --bone:#dcd6c4; --bright:#f1ebda;
+  --muted:#8b93a8; --gold:#d9a648; --gold-hi:#eec887; --gold-dim:#7d6128;
+  --crimson:#8e2f3c; --line:#1b2338; --line-soft:#121829;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{background:var(--ink)}
-body{margin:0;background:var(--ink);color:var(--bone);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
-a:hover{border-bottom-color:var(--gold)}
-.wrap{max-width:46rem;margin:0 auto;padding:0 1.4rem 5rem}
-nav{display:flex;flex-wrap:wrap;gap:1.3rem;padding:1.5rem 0 1.1rem;
-  border-bottom:1px solid var(--line);font-size:.82rem;letter-spacing:.14em;
-  text-transform:uppercase}
+body{margin:0;color:var(--bone);
+  background:radial-gradient(1100px 480px at 50% -160px,rgba(217,166,72,.055),transparent 62%),var(--ink);
+  font-family:var(--sans);font-size:17px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(217,166,72,.35)}
+a:hover{color:var(--gold-hi);border-bottom-color:var(--gold)}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem 6rem}
+nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:1.12rem;
+  padding:1.8rem 0 1.2rem;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase}
 nav a{color:var(--muted);border-bottom:none}
-nav a:hover{color:var(--gold)}
-nav a.here{color:var(--bone)}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;color:#efe9d8}
-h2{font-size:1.45rem;margin:2.8rem 0 .8rem}
-h3{font-size:1.12rem;margin:2rem 0 .5rem}
-p{margin:.7rem 0}
-ul{margin:.6rem 0 .6rem 1.2rem;padding:0}
-li{margin:.35rem 0}
-blockquote{margin:1rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:2px solid var(--gold-dim);
-  color:#c9c2ae}
-blockquote p{margin:.4rem 0}
-hr{border:none;border-top:1px solid var(--line);margin:2.4rem 0}
-.small{font-size:.88rem;color:var(--muted)}
-.kicker{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
-  margin:3.2rem 0 .6rem}
-.lede{font-size:1.16rem;color:#e8e2cf}
-.hero{padding:4.6rem 0 0;text-align:left}
-.hero .mark{font-family:Georgia,serif;font-size:3.4rem;letter-spacing:.42em;color:#f2ecd9;
-  margin:0}
-.horizon{position:relative;height:120px;margin:1.6rem 0 .4rem;overflow:hidden}
-.horizon .glow{position:absolute;left:50%;bottom:-92px;transform:translateX(-50%);
-  width:560px;height:180px;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(217,166,72,.5),rgba(217,166,72,.12) 55%,transparent 72%)}
-.horizon .sun{position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);
-  width:120px;height:60px;border-radius:120px 120px 0 0;
-  background:linear-gradient(180deg,#eec887,#c98f2e)}
-.horizon .line{position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold)}
-table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.95rem}
-th,td{text-align:left;vertical-align:top;padding:.55rem .7rem;border-bottom:1px solid var(--line)}
-th{color:#efe9d8;font-weight:600}
-td.n{white-space:nowrap;color:var(--gold);font-family:Georgia,serif}
-.panel{background:var(--panel);border:1px solid var(--line);padding:1.1rem 1.3rem;margin:1.2rem 0}
+nav a:hover{color:var(--gold-hi)}
+nav a.here{color:var(--bright)}
+nav a:first-child{font-size:.8rem;letter-spacing:.27em;color:var(--bright)}
+.horizon-rule{position:relative;height:1px;margin:0 0 3.2rem;
+  background:linear-gradient(90deg,transparent,rgba(217,166,72,.10) 18%,rgba(238,200,135,.8) 50%,rgba(217,166,72,.10) 82%,transparent)}
+.horizon-rule .diamond{position:absolute;left:50%;top:50%;width:5px;height:5px;
+  transform:translate(-50%,-50%) rotate(45deg);background:var(--crimson)}
+h1,h2,h3{font-family:var(--serif);font-weight:normal;color:var(--bright)}
+h1{font-size:2.15rem;line-height:1.25}
+h2{font-size:1.5rem;margin:3.8rem 0 1rem;line-height:1.35}
+h3{font-size:1.14rem;margin:2.4rem 0 .6rem}
+p{margin:.75rem 0}
+ul{margin:.7rem 0 .7rem 1.25rem;padding:0}
+li{margin:.45rem 0}
+blockquote{margin:1.7rem 0;padding:.3rem 0 .3rem 1.4rem;border-left:1px solid var(--gold-dim);
+  color:#d2cab4;font-family:var(--serif);font-size:1.05rem;line-height:1.85}
+blockquote p{margin:.45rem 0}
+hr{border:none;border-top:1px solid var(--line-soft);margin:2.8rem 0}
+.small{font-size:.88rem;color:var(--muted);line-height:1.65}
+.kicker{font-family:var(--sans);font-size:.74rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold);margin:3.4rem 0 .7rem}
+.lede{font-family:var(--serif);font-size:1.3rem;line-height:1.6;color:#e8e1cc}
+.herofig{margin:0 0 .4rem;width:100vw;position:relative;left:50%;transform:translateX(-50%);line-height:0}
+.herofig img{width:100%;height:min(62vh,580px);object-fit:cover;object-position:50% 58%;display:block}
+.herofig::after{content:"";position:absolute;left:0;right:0;bottom:0;height:130px;
+  background:linear-gradient(180deg,transparent,var(--ink))}
+.herotext{text-align:center;padding:2.9rem 0 .4rem}
+.mark{font-weight:300;font-size:3.5rem;letter-spacing:.46em;text-indent:.46em;
+  color:var(--bright);margin:0;line-height:1.1}
+.herotext .lede{margin:1.15rem auto 0;max-width:34rem}
+table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:.95rem;line-height:1.62}
+th{font-family:var(--sans);font-size:.71rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;text-align:left;vertical-align:top;
+  padding:.7rem .8rem;border-bottom:1px solid rgba(217,166,72,.45)}
+td{text-align:left;vertical-align:top;padding:1rem .8rem;border-bottom:1px solid var(--line-soft)}
+td.n{white-space:nowrap;color:var(--gold-hi);font-family:var(--serif);font-size:1.02rem}
+.panel{background:linear-gradient(180deg,rgba(238,200,135,.03),rgba(238,200,135,0) 140px),var(--panel);
+  border:1px solid var(--line);padding:1.5rem 1.7rem;margin:1.7rem 0}
 .panel p:first-child{margin-top:0}.panel p:last-child{margin-bottom:0}
-footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);
-  font-size:.85rem;color:var(--muted)}
-@media (max-width:560px){.hero .mark{font-size:2.2rem;letter-spacing:.3em}}
+.panel p{overflow-wrap:anywhere}
+.document{font-family:var(--serif);font-size:1.07rem;line-height:1.88}
+.document .kicker{text-align:center;margin-top:2.4rem}
+.document h1{text-align:center}
+.document h2{font-size:1.34rem;margin:3.2rem 0 .9rem;padding-top:2.3rem;border-top:1px solid var(--line-soft)}
+.document h3{font-size:1.16rem;margin:2.4rem 0 .6rem}
+.document blockquote{font-size:1.02rem}
+footer{margin-top:5rem;padding-top:1.4rem;border-top:1px solid var(--line-soft);
+  font-size:.85rem;color:var(--muted);line-height:1.65}
+@media (max-width:560px){
+  .mark{font-size:2.05rem;letter-spacing:.3em;text-indent:.3em}
+  .herofig img{height:44vh}
+  nav{gap:1.05rem}
+  h2{margin-top:3rem}
+  .panel{padding:1.2rem 1.15rem}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav><a href="index.html">Aurora</a><a href="charter.html">Charter</a><a href="constitution.html">Constitution</a><a href="record.html">Founding Record</a><a href="participate.html" class="here">Participate</a><a href="orientation.html">Orientation</a></nav>
+<div class="horizon-rule"><span class="diamond"></span></div>
 
 <p class="kicker">Participate</p>
 <h1 style="font-size:2rem;margin:.2rem 0 1rem">Joining, answering, and being protected</h1>
