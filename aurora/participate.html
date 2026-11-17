@@ -190,11 +190,23 @@ button.action:hover{border-color:var(--mm);color:var(--f1)}
   .panel{padding:1rem}
   .figlabel,.figstate,.figev{grid-column:span 12}
 }
+/* The Observatory stream rows (INTEGRATION.md SS3, Nov 16 2026): the
+   OBS_CSS block from the Observatory lane's generate.py, appended so
+   the integrated Observatory page renders its activity stream. */
+.evt{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;
+  padding:1rem 0;border-bottom:1px solid var(--line-soft);align-items:start}
+.evt-time{grid-column:span 3;font-family:var(--sans);font-size:.68rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--mm);line-height:16px}
+.evt-body{grid-column:span 9;font-size:.95rem;line-height:24px;color:var(--f2)}
+.evt-tag{display:inline-block;font-family:var(--sans);font-size:.68rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--f1);
+  border:1px solid var(--line);padding:0 .5rem;margin-right:.5rem;line-height:24px}
+@media (max-width:560px){.evt-time,.evt-body{grid-column:span 12}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a href="index.html">Aurora</a><a href="work.html">The Work</a><a href="library.html">The Library</a><a href="hall.html">The Hall</a><a href="constitution.html">Constitution</a><a href="charter.html">Charter</a><a href="record.html">Founding Record</a><a href="participate.html" class="here">Participate</a><a href="orientation.html">Orientation</a></nav>
+<nav><a href="index.html">Aurora</a><a href="work.html">The Work</a><a href="observatory.html">The Observatory</a><a href="library.html">The Library</a><a href="hall.html">The Hall</a><a href="constitution.html">Constitution</a><a href="charter.html">Charter</a><a href="record.html">Founding Record</a><a href="participate.html" class="here">Participate</a><a href="orientation.html">Orientation</a></nav>
 <div class="horizon-rule"></div>
 
 <p class="kicker">Participate</p>
