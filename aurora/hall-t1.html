@@ -97,6 +97,8 @@ hr{border:none;border-top:1px solid var(--line-soft);margin:3rem 0}
 .herofig{margin:0;width:100vw;position:relative;left:50%;transform:translateX(-50%);line-height:0;
   background:var(--panel)}
 .herofig svg{width:100%;height:min(62vh,580px);display:block}
+.herofig img{width:100%;height:min(62vh,580px);object-fit:cover;
+  object-position:50% 38%;display:block}
 .herofig figcaption{font-size:.85rem;color:var(--mm);line-height:24px;text-align:center;
   max-width:66ch;margin:0 auto;padding:1rem 1.5rem 0}
 .herotext{text-align:center;padding:3rem 0 .5rem}
@@ -182,7 +184,7 @@ button.action:hover{border-color:var(--mm);color:var(--f1)}
   padding:.5rem 1rem;margin:.5rem 0}
 @media (max-width:560px){
   .mark{font-size:2.08rem;letter-spacing:.3em;text-indent:.3em}
-  .herofig svg{height:44vh}
+  .herofig svg,.herofig img{height:44vh}
   nav{gap:1rem}
   h2{margin-top:3rem}
   .panel{padding:1rem}
